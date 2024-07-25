@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="game.css" rel="stylesheet"/>
+    <title>דף כניסה למשחק</title>
+</head>
+<style>
+       body
+        {
+            direction: rtl;
+            background-image: url('./images/im2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .ditels input, .submit1{
+            text-align: center;
+            margin: 15px;
+            width: 280px;
+            height: 60px;
+            border-radius: 10px;
+        } 
+    .colo{
+        text-align: center;
+        background-color: #ffffff13;
+        border: none;
+    }
+    .submit1{
+        color: aliceblue;
+        text-align: center;
+        background-color: #ffffff13;
+        width: 288px;
+        height: 66px;
+    }
+   
+    input{
+        background-color: #ffffffa2;
+    }
+
+
+</style>
+<body onload="looud()">
+
+    <h1>אתר המשחקים </h1>
+    <div class="ditels">
+        <input type="text" placeholder="שם" id="name" required> <br/>
+        <input type="password" placeholder="סיסמא" id="password" required><br/>
+        <button class="submit1" onclick="keep_ditels()">למעבר למשחק</button>
+    </div>
+    <button class="colo" style="color:aliceblue; text-align: center; margin: auto; display: block; font-size: large;" >להחלפת תמונת הרקע לחץ כאן</button>
+    <div></div>
+    <script src="index.js"></script> 
+    <script src="./yotzers.js"></script>
+</body>
+</html>

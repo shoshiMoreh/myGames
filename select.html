@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בחירת משחק</title>
+    <style>
+        body
+        {
+            direction: rtl;
+            background-image: url('./images/im2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        button
+        {
+            width: 320px;
+            height: 80px; 
+            background-color: #ffffff90;
+            border-radius: 15px;
+            margin: 30px;
+            display: block;
+            font-size: 30px;
+
+        }
+        button:hover
+        {
+            border: 2px solid white;
+        }
+        div
+        {
+            height: auto;
+            width: 400px;
+            margin: auto;
+            margin-top: 150px;
+        }
+        h1
+        {
+            color:white;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <h1>המשחקים שלנו---</h1>
+    <p>במה תרצי לשחק </p>
+    <div>
+        <button onclick="select_game()">2048</button>
+        <button onclick="select_game()">בול פגיעה</button>
+    </div>
+    <script src="select.js"></script>
+    <script src="./yotzers.js"></script>
+</body>
+</html>

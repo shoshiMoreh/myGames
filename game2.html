@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <style>
+        body
+        {
+            background-image: url('./images/im2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+        }
+        .header{ 
+            margin: 0;
+            margin: auto;
+            direction: rtl;
+            width: 700px;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black;
+        }
+        img, ll
+        {
+            width: 150px;
+            /* margin-right: 150px;
+            margin-left: none; */
+            margin: 0 140px 20px 140px;
+        }
+        aa{
+            display: flex;
+        }
+        .hamburger-menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+        }           
+
+        .hamburger-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+        }           
+
+        .hamburger-icon span {
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: white;
+            text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black;
+            transition: all 0.3s ease-in-out;
+        }           
+
+        .instructions {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 60px;
+            width: 230px;
+            padding: 10px;
+            background-color: #ffffff7f;
+            border: 1px solid black;
+            border-radius: 20px;
+            direction: rtl;
+        }
+        .ri{
+            width: 40px;
+            height: 40px;
+            margin: 0;
+        }
+        .upp
+        {
+           position: fixed; 
+            margin: 10px 20px;
+            /* width: 95%; */
+            right: 20px;
+            direction: rtl;
+            margin:5px 0;
+        }
+        @keyframes descend
+        {
+            0% 
+            {
+                /*top: -100px; אנימציה שיורדת מלמעלה*/ 
+                opacity: 0;
+            }
+            100% 
+            {
+                /*top: 30%; כנ"ל*/
+                opacity: 1;
+            }
+        }
+        @keyframes humb
+        {
+            0% 
+            {
+                left: -100px;
+                opacity: 0;
+            }
+            100% 
+            {
+                left: 60px;
+                opacity: 1;
+            }
+        }
+        @keyframes humbC
+        {
+            0% 
+            {
+                left: 60px;
+                opacity: 1;
+            }
+            100% 
+            {
+                left: -100px;
+                opacity: 0;
+            }
+            
+        }
+        button:hover
+        {
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body onload="start_game()">
+        <span class="upp">
+            <img src="./images/חזור.png" class="ri" onclick="chazor()">
+            <img src="./images/רענון.png" class="ri" onclick="rianun()">
+        </span>
+        <p class="header"></p>
+        <p class="header">ניקוד:</p>
+        <p class="header">0</p>
+        <aa>
+            
+            <d class="hamburger-menu">
+                <di class="hamburger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </di>
+                <dive class="instructions">
+                  <h2>הוראות משחק:</h2>
+                  <h3>מטרת המשחק:</h3>
+                  <p>שילוב אריחים עם אותו מספר כדי ליצור אריח בשווי 2048.</p>
+                  <h3>מהלך המשחק:</h3>
+                  <p>המשחק הוא לוח 4X4 שכל תא בו יכול להכיל מספר. בתחילה ישנם 2 אריחים על הרשת שלכל אחד מהם ערך של 2.
+                    ניתן להחליק אריחים ל-4 כיוונים: למעלה, למטה, שמאלה וימינה. כאשר אתה מחליק לכיוון מסוים, כל האריחים יזוזו הכי רחוק שאפשר בכיוון הזה עד שיפגעו בקצה הרשת או באריח אחר. אם 2 אריחים בעלי אותו מספר מתנגשים תוך כדי תנועה, הם יתמזגו לאריח בודד עם סכום הערכים שלהם.
+                    לאחר כל מהלך אריח חדש עם ערך של 2 יופיע במקום אקראי ריק ברשת.
+                    </p>
+                  <h3>סיום המשחק:</h3>
+                  <p>ניצחון- ישנו אריח על הרשת עם הערך 2048.
+                    <br>הפסד- הרשת מלאה ולא ניתן לבצע מהלכים נוספים.
+                  </p>
+                </dive>
+            </d> 
+            <ll></ll>
+            <section></section>
+            <section></section> 
+            <img src="./images/תמונה1.png">
+        </aa>
+<script src="./game21.js"></script>
+<script src="./yotzers.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="game.css" rel="stylesheet"/>
+    <title>בול פגיעה</title>
+    <style>
+        body
+        {
+            background-image: url('./images/im2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .header
+        {
+            font-size: 30px;
+            text-align: center;
+            text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black;
+            margin: 6px 0;
+        }
+        img,.aa
+        {
+            width: 100px;
+            /* margin-right: 150px;
+            margin-left: none; */
+            margin: 0 140px 20px 140px;
+        }
+        div{
+            display: flex;
+
+        }
+        .content{
+            display: flex;
+            width: 480px;
+            margin: auto;
+
+        }
+        .hamburger-menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+        }           
+
+        .hamburger-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+        }           
+
+        .hamburger-icon span {
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color:white;
+            text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black;
+            transition: all 0.3s ease-in-out;
+        }           
+
+        .instructions {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 60px;
+            width: 230px;
+            padding: 10px;
+            background-color: #ffffff7f;
+            border: 1px solid black;
+            border-radius: 20px;
+            direction: rtl;
+        }
+        .ri{
+            width: 40px;
+            height: 40px;
+            margin: 0;
+        }
+        .upp
+        { 
+            position: fixed;
+            margin: 5px 0;
+            /* width: 95%; */
+            right: 20px;
+            direction: rtl;
+        }
+        @keyframes descend
+        {
+            0% 
+            {
+                /*top: -100px; אנימציה שיורדת מלמעלה*/ 
+                opacity: 0;
+            }
+            100% 
+            {
+                /*top: 30%; כנ"ל*/
+                opacity: 1;
+            }
+        }
+        @keyframes humb
+        {
+            0% 
+            {
+                left: -100px;
+                opacity: 0;
+            }
+            100% 
+            {
+                left: 60px;
+                opacity: 1;
+            }
+        }
+        @keyframes humbC
+        {
+            0% 
+            {
+                left: 60px;
+                opacity: 1;
+            }
+            100% 
+            {
+                left: -100px;
+                opacity: 0;
+            }
+            
+        }
+        button:hover
+        {
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body onload="start_game()">
+    <div class="upp">
+        <img src="./images/חזור.png" class="ri" onclick="chazor()">
+        <img src="./images/רענון.png" class="ri" onclick="rianun()">
+    </div>
+    <p class="header"></p>
+    <div>
+        <div class="aa"></div>
+        <div class="content">
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="instructions">
+                  <h2>הוראות המשחק </h2>
+                  <h3>מטרת המשחק:</h3>
+                  <p>גילוי הרכב הצבעים שהמחשב הגריל לפי הרמזים "בול" ו- "פגיעה".</p>
+                  <h3>מהלך המשחק:</h3>
+                  <p>במשחק ישנם 6 עיגולים בצבעים שונים. המחשב מגריל 4 צבעים בסדר מסוים ועל השחקן לזהות זאת ב- 8 ניסיונות בלבד.
+                    בכל תור השחקן בוחר ע"י לחיצה על העיגולים הצבועים את ההרכב שנראה לו, ומקבל בתגובה משוב על מה שלחץ- מקבל כמה "בול" ו-"פגיעה" יש לו.
+                    אם הצבע נמצא בהרכב שהוגרל, אך לא במקומו הנכון- עיגול בצבע לבן (פגיעה).
+                    אם הצבע נמצא בהרכב שהוגרל במקום הנכון- עיגול בצבע שחור (בול).
+                    </p>
+                  <h3>סיום המשחק:</h3>
+                  <p>ניצחון- כאשר כל העיגולים של המשוב שחורים השחקן מנצח- גילה את הצבעים שהוגרלו.
+                    <br>
+                    כישלון- כאשר השחקן ניחש 8 פעמים ולא הצליח לגלות את ההרכב שהמחשב הגריל.
+                </p>
+                </div>
+            </div> 
+            <section></section>
+            <section></section>
+            <section></section> 
+           
+        </div>
+        <img src="./images/תמונה2.png">
+    </div>
+    <script src="./game.js"></script>
+    <script src="./yotzers.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בחירת משחק</title>
+    <style>
+        body
+        {
+            direction: rtl;
+            background-image: url('./images/im2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        button
+        {
+            width: 320px;
+            height: 80px; 
+            background-color: #ffffff90;
+            border-radius: 15px;
+            margin: 30px;
+            display: block;
+            font-size: 30px;
+            direction: ltr;
+
+        }
+        button:hover
+        {
+            border: 2px solid white;
+        }
+        div
+        {
+            height: auto;
+            width: 400px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        h1
+        {
+            color:white;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <h1>המשחקים שלנו---</h1>
+    <p>בחר גודל לוח משחק </p>
+    <div>
+        <button onclick="select_size()">3 x 3</button>
+        <button onclick="select_size()">4 x 4</button>
+        <button onclick="select_size()">5 x 5</button>
+        <button onclick="select_size()">6 x 6</button>
+    </div>
+    <script src="size.js"></script>
+    <script src="./yotzers.js"></script>
+</body>
+</html>
